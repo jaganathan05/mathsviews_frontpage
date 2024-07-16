@@ -1,33 +1,35 @@
-
+@font-face {
+    font-family: 'Lemon Milk';
+    src: url('/public/LEMONMILK-Bold.otf');
+}
 
 body{
-    background-color: darkblue;
-}
+    background-repeat: no-repeat;
+    background-image: url('/public/A.jpg');
+    background-size: 100%;
+}    
 
 .signup-box{
 
-    border: 2px solid rgb(255, 253, 253);
+    border: 2px solid rgb(27, 7, 214);
     border-radius: 10px;
     width: 600px;
-    height : 300px auto;
-    padding-left: 30px;
-    padding-right: 10px;
-    background: #F0C27B;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #4B1248, #F0C27B);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #4B1248, #F0C27B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    height : 500px  auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    background-color: rgb(201, 236, 236);
+    
 
 }
 
-
-
 .signup-box h2{
-   
+    font-family: 'Lemon Milk';
     font-size: 30px;
-    color : yellow;
+    color : rgb(27, 7, 214);
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     letter-spacing: 2px;
 }
 
@@ -41,9 +43,6 @@ background: linear-gradient(to right, #4B1248, #F0C27B); /* W3C, IE 10+/ Edge, F
 }
 
 
-.input.invalid{
-    background-color: rgb(243, 26, 55);
-}
 
 .link{
     margin-top: 10px;
@@ -71,4 +70,10 @@ background: linear-gradient(to right, #4B1248, #F0C27B); /* W3C, IE 10+/ Edge, F
         font-size: 15px;
        
     }
+    body{
+        background-repeat: no-repeat;
+        background-image: url('/public/B.png');
+        background-position-y: center;
+    }
 }
+
