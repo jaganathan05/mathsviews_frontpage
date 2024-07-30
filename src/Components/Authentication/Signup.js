@@ -1,10 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState ,useEffect} from "react";
 import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 
 import Form from "react-bootstrap/Form";
 import axios from "axios";
 import './Signup.css';
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 function Signup() {
     const [isValidated, setValidated] = useState(false);
@@ -16,6 +17,14 @@ function Signup() {
     const passwordref = useRef();
     const conformpasswordref = useRef();
     const phonenoref = useRef();
+
+    useEffect(()=>{
+        document.body.classList.add('Signup-Page-body');
+
+        return ()=>{
+            document.body.classList.remove('Signup-Page-body');
+        }
+    },[])
 
     const [validateEmail , setValidateEmail]=useState(true)
     const [validateName , setValidateName] = useState(true)
@@ -236,7 +245,9 @@ function Signup() {
                         <Button className="btn-primary btn-lg" onClick={verifyOtpHandler}>Verify OTP</Button>
                     )}
                 </div>
+                <p className="text-lg-center mt-2" >Already have an account Click ! <Link to='/login' className='text-decoration-none'>Login</Link> </p>
             </Form>
+            
         </div>
     );
 }
